@@ -10,7 +10,7 @@ interface AuthLayoutProps {
 
 export default function AuthSimpleLayout({ children, title, description }: AuthLayoutProps) {
     return (
-        <div className="min-h-svh bg-slate-50 lg:grid lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="min-h-svh bg-slate-50 transition-colors dark:bg-slate-950 lg:grid lg:grid-cols-[1.05fr_0.95fr]">
             <aside className="relative hidden min-h-svh overflow-hidden bg-slate-950 p-10 text-white lg:flex lg:flex-col xl:p-14">
                 <div className="absolute -left-32 top-1/3 h-80 w-80 rounded-full bg-amber-400/10 blur-3xl" />
                 <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-amber-400/10 blur-3xl" />
@@ -57,9 +57,9 @@ export default function AuthSimpleLayout({ children, title, description }: AuthL
                 </p>
             </aside>
 
-            <main className="flex min-h-svh flex-col">
+            <main className="flex min-h-svh flex-col dark:text-slate-100">
                 <div className="flex h-20 items-center justify-between px-5 sm:px-8 lg:hidden">
-                    <Link href={route('home')} className="flex items-center gap-2.5 font-bold text-slate-950">
+                    <Link href={route('home')} className="flex items-center gap-2.5 font-bold text-slate-950 dark:text-white">
                         <span className="rounded-lg bg-amber-400 p-2"><Gavel className="h-5 w-5" /></span>
                         Gestion Enchères
                     </Link>
@@ -69,10 +69,10 @@ export default function AuthSimpleLayout({ children, title, description }: AuthL
                 </div>
 
                 <div className="flex flex-1 items-center justify-center px-4 py-8 sm:px-8 lg:px-12">
-                    <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
+                    <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none">
                         <div className="mb-8">
-                            <h1 className="text-3xl font-bold tracking-tight text-slate-950">{title}</h1>
-                            <p className="mt-2 text-sm leading-6 text-slate-500">{description}</p>
+                            <h1 className="text-3xl font-bold tracking-tight text-slate-950 dark:text-white">{title}</h1>
+                            <p className="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">{description}</p>
                         </div>
                         {children}
                     </div>

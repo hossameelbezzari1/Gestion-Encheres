@@ -36,14 +36,14 @@ export default function SearchInput({ value = '', routeName, params = {}, placeh
                     value={search}
                     onChange={(event) => setSearch(event.target.value)}
                     placeholder={placeholder}
-                    className="h-11 w-full rounded-lg border border-slate-300 bg-white pl-10 pr-10 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                    className="h-11 w-full rounded-lg border border-slate-300 bg-white pl-10 pr-10 text-slate-900 outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-amber-400 dark:focus:ring-amber-900/50"
                 />
                 {search && (
                     <button
                         type="button"
                         onClick={clear}
                         aria-label="Effacer la recherche"
-                        className="absolute right-2 top-2 rounded-md p-1.5 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700"
+                        className="absolute right-2 top-2 rounded-md p-1.5 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-200"
                     >
                         <X className="h-4 w-4" />
                     </button>
@@ -51,7 +51,7 @@ export default function SearchInput({ value = '', routeName, params = {}, placeh
             </label>
             <button
                 type="submit"
-                className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-slate-900 px-4 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
+                className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-lg bg-slate-900 px-4 text-sm font-semibold text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:bg-amber-400 dark:text-slate-950 dark:hover:bg-amber-300"
             >
                 <Search className="h-4 w-4" />
                 <span className="hidden sm:inline">Rechercher</span>

@@ -156,3 +156,46 @@
         @apply bg-background text-foreground;
     }
 }
+
+/* Dark compatibility for the slate-based auction interface. */
+@layer utilities {
+    .dark .bg-white { background-color: hsl(222, 47%, 11%); }
+    .dark .bg-white\/90 { background-color: hsl(222 47% 11% / 0.9); }
+    .dark .bg-slate-50 { background-color: hsl(222, 47%, 7%); }
+    .dark .bg-slate-100 { background-color: hsl(215, 28%, 17%); }
+    .dark .bg-slate-200 { background-color: hsl(215, 25%, 27%); }
+
+    .dark .text-slate-950,
+    .dark .text-slate-900,
+    .dark .text-slate-800 { color: hsl(210, 40%, 98%); }
+
+    .dark .text-slate-700,
+    .dark .text-slate-600 { color: hsl(215, 20%, 75%); }
+
+    .dark .text-slate-500,
+    .dark .text-slate-400 { color: hsl(215, 16%, 60%); }
+
+    .dark .border-slate-100,
+    .dark .border-slate-200,
+    .dark .border-slate-300 { border-color: hsl(215, 25%, 22%); }
+
+    .dark .divide-slate-100 > :not(:last-child),
+    .dark .divide-slate-200 > :not(:last-child) { border-color: hsl(215, 25%, 22%); }
+
+    .dark input,
+    .dark textarea,
+    .dark select { color-scheme: dark; }
+
+    .dark input::placeholder,
+    .dark textarea::placeholder { color: hsl(215, 16%, 47%); }
+
+    .dark .bg-amber-50 { background-color: hsl(32, 70%, 12%); }
+    .dark .bg-emerald-50 { background-color: hsl(160, 60%, 10%); }
+    .dark .bg-red-50 { background-color: hsl(0, 55%, 12%); }
+    .dark .bg-sky-50 { background-color: hsl(200, 65%, 12%); }
+
+    .dark .hover\:bg-slate-50:hover,
+    .dark .hover\:bg-slate-100:hover { background-color: hsl(215, 28%, 17%); }
+
+    .dark .hover\:bg-slate-50\/70:hover { background-color: hsl(215 28% 17% / 0.7); }
+}
