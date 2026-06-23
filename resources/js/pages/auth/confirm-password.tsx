@@ -23,16 +23,15 @@ export default function ConfirmPassword() {
     };
 
     return (
-        <AuthLayout
-            title="Confirmez votre identité"
-            description="Cette zone est sécurisée. Confirmez votre mot de passe pour continuer."
-        >
+        <AuthLayout title="Confirmez votre identité" description="Cette zone est sécurisée. Confirmez votre mot de passe pour continuer.">
             <Head title="Confirmer le mot de passe" />
 
             <form onSubmit={submit}>
                 <div className="space-y-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="password" className="font-medium text-slate-700">Mot de passe</Label>
+                        <Label htmlFor="password" className="font-medium text-slate-700">
+                            Mot de passe
+                        </Label>
                         <Input
                             id="password"
                             type="password"

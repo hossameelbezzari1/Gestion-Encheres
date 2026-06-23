@@ -47,7 +47,9 @@ export default function Password() {
             <SettingsLayout>
                 <div className="rounded-xl border border-slate-200 bg-white shadow-sm">
                     <div className="flex items-center gap-3 border-b border-slate-100 px-5 py-4 sm:px-6">
-                        <span className="rounded-lg bg-amber-100 p-2 text-amber-700"><KeyRound className="h-5 w-5" /></span>
+                        <span className="rounded-lg bg-amber-100 p-2 text-amber-700">
+                            <KeyRound className="h-5 w-5" />
+                        </span>
                         <div>
                             <h2 className="font-semibold text-slate-950">Modifier le mot de passe</h2>
                             <p className="text-sm text-slate-500">Utilisez un mot de passe long et unique pour protéger votre compte.</p>
@@ -56,7 +58,9 @@ export default function Password() {
 
                     <form onSubmit={updatePassword} className="space-y-5 p-5 sm:p-6">
                         <div className="grid gap-2">
-                            <Label htmlFor="current_password" className="font-medium text-slate-700">Mot de passe actuel</Label>
+                            <Label htmlFor="current_password" className="font-medium text-slate-700">
+                                Mot de passe actuel
+                            </Label>
 
                             <Input
                                 id="current_password"
@@ -73,7 +77,9 @@ export default function Password() {
                         </div>
 
                         <div className="grid gap-2">
-                            <Label htmlFor="password" className="font-medium text-slate-700">Nouveau mot de passe</Label>
+                            <Label htmlFor="password" className="font-medium text-slate-700">
+                                Nouveau mot de passe
+                            </Label>
 
                             <Input
                                 id="password"
@@ -90,7 +96,9 @@ export default function Password() {
                         </div>
 
                         <div className="grid gap-2">
-                            <Label htmlFor="password_confirmation" className="font-medium text-slate-700">Confirmer le mot de passe</Label>
+                            <Label htmlFor="password_confirmation" className="font-medium text-slate-700">
+                                Confirmer le mot de passe
+                            </Label>
 
                             <Input
                                 id="password_confirmation"
@@ -117,7 +125,10 @@ export default function Password() {
                                 leave="transition ease-in-out"
                                 leaveTo="opacity-0"
                             >
-                                <p className="flex items-center gap-1.5 text-sm font-medium text-emerald-600"><CheckCircle2 className="h-4 w-4" />Enregistré</p>
+                                <p className="flex items-center gap-1.5 text-sm font-medium text-emerald-600">
+                                    <CheckCircle2 className="h-4 w-4" />
+                                    Enregistré
+                                </p>
                             </Transition>
                         </div>
                     </form>

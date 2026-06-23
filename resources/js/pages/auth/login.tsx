@@ -42,7 +42,9 @@ export default function Login({ status, canResetPassword }: LoginProps) {
             <form className="flex flex-col gap-6" onSubmit={submit}>
                 <div className="grid gap-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="email" className="font-medium text-slate-700">Adresse e-mail</Label>
+                        <Label htmlFor="email" className="font-medium text-slate-700">
+                            Adresse e-mail
+                        </Label>
                         <Input
                             id="email"
                             type="email"
@@ -60,7 +62,9 @@ export default function Login({ status, canResetPassword }: LoginProps) {
 
                     <div className="grid gap-2">
                         <div className="flex items-center">
-                            <Label htmlFor="password" className="font-medium text-slate-700">Mot de passe</Label>
+                            <Label htmlFor="password" className="font-medium text-slate-700">
+                                Mot de passe
+                            </Label>
                             {canResetPassword && (
                                 <TextLink href={route('password.request')} className="ml-auto text-sm" tabIndex={5}>
                                     Mot de passe oublié ?
@@ -83,10 +87,17 @@ export default function Login({ status, canResetPassword }: LoginProps) {
 
                     <div className="flex items-center space-x-3">
                         <Checkbox id="remember" name="remember" tabIndex={3} />
-                        <Label htmlFor="remember" className="text-slate-600">Se souvenir de moi</Label>
+                        <Label htmlFor="remember" className="text-slate-600">
+                            Se souvenir de moi
+                        </Label>
                     </div>
 
-                    <Button type="submit" className="mt-2 h-11 w-full bg-amber-400 font-semibold text-slate-950 hover:bg-amber-300" tabIndex={4} disabled={processing}>
+                    <Button
+                        type="submit"
+                        className="mt-2 h-11 w-full bg-amber-400 font-semibold text-slate-950 hover:bg-amber-300"
+                        tabIndex={4}
+                        disabled={processing}
+                    >
                         {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
                         Se connecter
                     </Button>
@@ -100,7 +111,11 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                 </div>
             </form>
 
-            {status && <div className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">{status}</div>}
+            {status && (
+                <div className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">
+                    {status}
+                </div>
+            )}
         </AuthLayout>
     );
 }

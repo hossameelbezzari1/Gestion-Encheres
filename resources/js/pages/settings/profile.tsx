@@ -33,7 +33,9 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
             <SettingsLayout>
                 <div className="rounded-xl border border-slate-200 bg-white shadow-sm">
                     <div className="flex items-center gap-3 border-b border-slate-100 px-5 py-4 sm:px-6">
-                        <span className="rounded-lg bg-amber-100 p-2 text-amber-700"><UserRound className="h-5 w-5" /></span>
+                        <span className="rounded-lg bg-amber-100 p-2 text-amber-700">
+                            <UserRound className="h-5 w-5" />
+                        </span>
                         <div>
                             <h2 className="font-semibold text-slate-950">Informations du profil</h2>
                             <p className="text-sm text-slate-500">Mettez à jour votre nom et votre adresse e-mail.</p>
@@ -42,7 +44,9 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
 
                     <form onSubmit={submit} className="space-y-5 p-5 sm:p-6">
                         <div className="grid gap-2">
-                            <Label htmlFor="name" className="font-medium text-slate-700">Nom complet</Label>
+                            <Label htmlFor="name" className="font-medium text-slate-700">
+                                Nom complet
+                            </Label>
 
                             <Input
                                 id="name"
@@ -58,7 +62,9 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                         </div>
 
                         <div className="grid gap-2">
-                            <Label htmlFor="email" className="font-medium text-slate-700">Adresse e-mail</Label>
+                            <Label htmlFor="email" className="font-medium text-slate-700">
+                                Adresse e-mail
+                            </Label>
 
                             <Input
                                 id="email"
@@ -110,7 +116,10 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                                 leave="transition ease-in-out"
                                 leaveTo="opacity-0"
                             >
-                                <p className="flex items-center gap-1.5 text-sm font-medium text-emerald-600"><CheckCircle2 className="h-4 w-4" />Enregistré</p>
+                                <p className="flex items-center gap-1.5 text-sm font-medium text-emerald-600">
+                                    <CheckCircle2 className="h-4 w-4" />
+                                    Enregistré
+                                </p>
                             </Transition>
                         </div>
                     </form>

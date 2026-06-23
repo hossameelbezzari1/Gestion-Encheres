@@ -42,7 +42,9 @@ export default function ResetPassword({ token, email }: ResetPasswordProps) {
             <form onSubmit={submit}>
                 <div className="grid gap-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="email" className="font-medium text-slate-700">Adresse e-mail</Label>
+                        <Label htmlFor="email" className="font-medium text-slate-700">
+                            Adresse e-mail
+                        </Label>
                         <Input
                             id="email"
                             type="email"
@@ -57,7 +59,9 @@ export default function ResetPassword({ token, email }: ResetPasswordProps) {
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password" className="font-medium text-slate-700">Nouveau mot de passe</Label>
+                        <Label htmlFor="password" className="font-medium text-slate-700">
+                            Nouveau mot de passe
+                        </Label>
                         <Input
                             id="password"
                             type="password"
@@ -73,7 +77,9 @@ export default function ResetPassword({ token, email }: ResetPasswordProps) {
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password_confirmation" className="font-medium text-slate-700">Confirmer le mot de passe</Label>
+                        <Label htmlFor="password_confirmation" className="font-medium text-slate-700">
+                            Confirmer le mot de passe
+                        </Label>
                         <Input
                             id="password_confirmation"
                             type="password"
@@ -87,7 +93,11 @@ export default function ResetPassword({ token, email }: ResetPasswordProps) {
                         <InputError message={errors.password_confirmation} className="mt-2" />
                     </div>
 
-                    <Button type="submit" className="mt-2 h-11 w-full bg-amber-400 font-semibold text-slate-950 hover:bg-amber-300" disabled={processing}>
+                    <Button
+                        type="submit"
+                        className="mt-2 h-11 w-full bg-amber-400 font-semibold text-slate-950 hover:bg-amber-300"
+                        disabled={processing}
+                    >
                         {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
                         Réinitialiser le mot de passe
                     </Button>
