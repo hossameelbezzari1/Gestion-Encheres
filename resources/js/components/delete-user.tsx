@@ -3,9 +3,9 @@ import { FormEventHandler, useRef } from 'react';
 
 import InputError from '@/components/input-error';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { AlertTriangle, Trash2 } from 'lucide-react';
 
 export default function DeleteUser() {
@@ -31,7 +31,9 @@ export default function DeleteUser() {
     return (
         <div className="overflow-hidden rounded-xl border border-red-200 bg-white shadow-sm">
             <div className="flex items-center gap-3 border-b border-red-100 px-5 py-4 sm:px-6">
-                <span className="rounded-lg bg-red-100 p-2 text-red-700"><Trash2 className="h-5 w-5" /></span>
+                <span className="rounded-lg bg-red-100 p-2 text-red-700">
+                    <Trash2 className="h-5 w-5" />
+                </span>
                 <div>
                     <h2 className="font-semibold text-slate-950">Supprimer le compte</h2>
                     <p className="text-sm text-slate-500">Supprimez définitivement votre compte et toutes ses données.</p>
@@ -43,12 +45,16 @@ export default function DeleteUser() {
                     <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" />
                     <div>
                         <p className="font-semibold">Cette action est irréversible</p>
-                        <p className="mt-1 text-sm leading-5 text-red-700">Tous vos produits, enchères et informations seront définitivement supprimés.</p>
+                        <p className="mt-1 text-sm leading-5 text-red-700">
+                            Tous vos produits, enchères et informations seront définitivement supprimés.
+                        </p>
                     </div>
                 </div>
                 <Dialog>
                     <DialogTrigger asChild>
-                        <Button variant="destructive" className="font-semibold">Supprimer mon compte</Button>
+                        <Button variant="destructive" className="font-semibold">
+                            Supprimer mon compte
+                        </Button>
                     </DialogTrigger>
                     <DialogContent className="border-slate-200 sm:max-w-lg">
                         <DialogTitle className="text-xl text-slate-950">Confirmer la suppression du compte</DialogTitle>
